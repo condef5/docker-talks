@@ -1,0 +1,35 @@
+{
+  "ip": "104.248.189.186",
+  "comands": [
+    "adduser username",
+    "usermod -aG sudo $USER",
+    "sudo usermod -aG docker $USER",
+    "docker system prune -a",
+    "docker exec -it 02_db_1 bash -l ",
+    "docker rm $(docker ps -a -q)",
+    "docker kill $(docker ps -q)",
+    "service docker restart"
+  ],
+  "users": [
+    {
+      "user": "tony",
+      "password": "admin123"
+    },
+    {
+      "user": "samuel",
+      "password": "admin123"
+    },
+    {
+      "user": "yelsin",
+      "password": "admin123"
+    },
+    {
+      "user": "brian",
+      "password": "admin123"
+    },
+    {
+      "user": "gilder",
+      "password": "admin123"
+    }
+  ]
+}
